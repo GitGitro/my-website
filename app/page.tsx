@@ -99,13 +99,6 @@ const services = [
   },
 ];
 
-const socialLinks = [
-  { platform: "GitHub", url: "https://github.com/GitGitro" },
-  { platform: "Telegram", url: "https://t.me/GitGitro" },
-  { platform: "Discord", url: "https://www.discord.com/user/_gitro" },
-  { platform: "Matrix", url: "https://matrix.to/#/@gitrowastaken:matrix.org" },
-];
-
 export default function Home() {
   return (
     <div className="text-center p-4">
