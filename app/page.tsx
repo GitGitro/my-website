@@ -1,101 +1,291 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const services = [
+  {
+    title: "Sudo-Flix",
+    description:
+      "A cutesy app for watching your favorite movies and shows. Totally free and open source, forever!",
+    link: "https://flix.gitro.xyz",
+    img: "/sudo-flix.png",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "Animunet",
+    description:
+      "A website where you can watch anime, made using next.js and animetize-api.",
+    link: "https://ani.gitro.xyz",
+    img: "/animunet.png",
+    vercel: "/vercel.jpeg",
+  },
+  {
+    title: "Enjoytown",
+    description:
+      "A website where you can watch drama, anime, movies and read manga for free.",
+    link: "https://enjoytown.gitro.xyz",
+    img: "/enjoytown.png",
+    vercel: "/vercel.jpeg",
+  },
+  {
+    title: "AnonymousOverflow",
+    description: "View StackOverflow in privacy and without the clutter.",
+    link: "https://anonymousoverflow.gitro.xyz",
+    img: "/anonymousoverflow.webp",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "ProxyTok",
+    description: "Open source alternative frontend for TikTok made using PHP.",
+    link: "https://proxytok.gitro.xyz",
+    img: "/proxytok.png",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "Rimgo",
+    description: "An alternative frontend for Imgur.",
+    link: "https://rimgo.gitro.xyz",
+    img: "/rimgo.png",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "Quetre",
+    description:
+      "Quetre is an alternative front-end to Quora. It enables you to see answers without ads, trackers, and other such bloat.",
+    link: "https://quetre.gitro.xyz",
+    img: "/quetre.png",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "Mozhi",
+    description:
+      "Mozhi (spelt moḻi) is an alternative-frontend for many translation engines.",
+    link: "https://mozhi.gitro.xyz",
+    img: "/mozhi.png",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "NextChat",
+    description:
+      "A cross-platform ChatGPT/Gemini UI (Web / PWA / Linux / Win / MacOS).",
+    link: "https://chatgpt.gitro.xyz",
+    img: "/next_chat.png",
+    donors: "Donators only",
+    vercel: "/vercel.jpeg",
+  },
+  {
+    title: "StirlingPDF",
+    description:
+      "Locally hosted web application that allows you to perform various operations on PDF files.",
+    link: "https://stirling.gitro.xyz",
+    img: "/stirling.png",
+    donors: "Donators only",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "Wallos",
+    description: "Wallos: Open-Source Personal Subscription Tracker.",
+    link: "https://wallos.gitro.xyz",
+    img: "/wallos.png",
+    donors: "Donators only",
+    cloudflare: "/cloudflare.png",
+  },
+  {
+    title: "Linkding",
+    description:
+      "Self-hosted bookmark manager that is designed be to be minimal, fast, and easy to set up using Docker.",
+    link: "https://linkding.gitro.xyz",
+    img: "/linkding.png",
+    donors: "Donators only",
+    cloudflare: "/cloudflare.png",
+  },
+];
+
+const socialLinks = [
+  { platform: "GitHub", url: "https://github.com/GitGitro" },
+  { platform: "Telegram", url: "https://t.me/GitGitro" },
+  { platform: "Discord", url: "https://www.discord.com/user/_gitro" },
+  { platform: "Matrix", url: "https://matrix.to/#/@gitrowastaken:matrix.org" },
+];
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+    <div className="text-center p-4">
+      <div className="mb-10">
+        <img
+          src="https://avatars.githubusercontent.com/u/108683123"
+          alt="Gitro"
+          className="rounded-full w-36 h-36 mx-auto"
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
+      </div>
+      <div className="flex items-center justify-center pb-6">
+        <div className="mockup-code">
+          <pre data-prefix="$" className="flex items-left justify-left">
+            <code>FOSS and privacy enthusiast</code>
+          </pre>
+          <pre
+            data-prefix=">"
+            className="text-warning flex items-left justify-left"
+          >
+            <code>
+              Mantainer at
+              <a
+                href="https://github.com/Delta-Icons"
+                className="mx-2 text-blue-500"
+              >
+                Delta
+              </a>
+              for the
+              <a
+                href="https://github.com/Delta-Icons/android"
+                className="mx-2 text-blue-500"
+              >
+                android
+              </a>
+              and
+              <a
+                href="https://github.com/Delta-Icons/aegis"
+                className="mx-2 text-blue-500"
+              >
+                Aegis
+              </a>
+              icon packs.
             </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          </pre>
+          <pre
+            data-prefix=">"
+            className="text-success flex items-left justify-left"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <code>And I also host some privacy respecting projects!</code>
+          </pre>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
+      </div>
+
+      <div className="flex flex-wrap justify-center gap-4 mb-10">
+        {services.map((service, index) => (
+          <div key={service.title || index} className="indicator">
+            <div className="card w-80 bg-base-100 shadow-xl ">
+              <figure>
+                <img
+                  src={service.img}
+                  alt={service.title}
+                  className="rounded-t-lg size-24 p-4"
+                />
+              </figure>
+
+              <div className="card-body">
+                <h2 className="card-title text-center">{service.title}</h2>
+                <p className="text-left">{service.description}</p>
+                <p className="text-red-500">{service.donors}</p>
+
+                <div className="card-actions object-right">
+                  <Link href={service.link}>
+                    <button className="btn btn-primary">Visit</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div className="overflow-x-auto flex justify-center">
+        <div className="card bg-base-100 w-96 shadow-xl">
+          <div className="card-body">
+            <h2 className="card-title">
+              Mantaining all the projects up and running costs!
+            </h2>
+            <p>
+              If you want access to one of the services marked as Donators Only,
+              with a small monthly fee you can get access to the desired service
+              and forget all about self-hosting while supporting me and help
+              keep the the server up! Check on Ko-Fi or BuyMeACoffee below!
+              (Ko-Fi offers Paypal)
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="flex justify-center space-x-4">
+        <Link href="https://buymeacoffee.com/gitro/membership" target="_blank">
+          <img className="w-44 h-auto p-2" src="/bmc.png" alt="BMC" />
+        </Link>
+        <Link href="https://ko-fi.com/gitro/tiers" target="_blank">
+          <img className="w-40 h-auto p-2" src="/kofi.webp" alt="Kofi" />
+        </Link>
+      </div>
+
+      <div className="overflow-x-auto flex justify-center">
+        <table className="table max-w-4xl w-full border border-gray-300">
+          <thead>
+            <tr>
+              <th></th>
+              <th>Donators Only</th>
+              <th>Uses Cloudflare</th>
+              <th>Uses Vercel</th>
+            </tr>
+          </thead>
+          <tbody>
+            {services.map((service, index) => (
+              <tr key={service.title || index} className="hover">
+                <th>{service.title}</th>
+                <td className="pl-12">
+                  {service.donors === "Donators only" ? (
+                    <img src="/green_checkbox.png" alt="Checkbox" />
+                  ) : null}
+                </td>
+                <td className="pl-12">
+                  {service.cloudflare === "/cloudflare.png" ? (
+                    <img src="/cloudflare.png" alt="Checkbox" />
+                  ) : null}
+                </td>
+                <td className="pl-12">
+                  {service.vercel === "/vercel.jpeg" ? (
+                    <img src="/vercel.jpeg" alt="Checkbox" />
+                  ) : null}
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+
+      <div className="flex justify-center items-center space-x-4 p-4">
+        <h1 className="text-3xl font-bold">Find me here</h1>
+      </div>
+
+      <div className="flex justify-center items-center space-x-4 p-4">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://github.com/GitGitro"
           target="_blank"
           rel="noopener noreferrer"
+          className="btn btn-circle btn-outline"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
+          <img src="/github.png" alt="GitHub" className="h-10 w-10" />
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://t.me/GitGitro"
           target="_blank"
           rel="noopener noreferrer"
+          className="btn btn-circle btn-outline"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
+          <img src="/telegram.png" alt="Telegram" className="h-10 w-10" />
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+          href="https://www.discord.com/user/_gitro"
           target="_blank"
           rel="noopener noreferrer"
+          className="btn btn-circle btn-outline"
         >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
+          <img src="/discord.png" alt="Discord" className="h-10 w-10" />
         </a>
-      </footer>
+        <a
+          href="https://matrix.to/#/@gitrowastaken:matrix.org"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-circle btn-outline"
+        >
+          <img src="/matrix.png" alt="Matrix" className="h-10 w-10" />
+        </a>
+      </div>
     </div>
   );
 }
