@@ -15,9 +15,11 @@
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-customWhite text-customBlack; /* Default styles */
+}
+
+body.dark {
+  @apply bg-customDark text-customLight; /* Dark mode styles */
 }
 
 @layer utilities {
