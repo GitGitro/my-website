@@ -9,7 +9,7 @@ const services = [
       "A cutesy app for watching your favorite movies and shows. Totally free and open source, forever!",
     link: "https://flix.gitro.xyz",
     img: "/sudo-flix.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Animunet",
@@ -32,21 +32,21 @@ const services = [
     description: "View StackOverflow in privacy and without the clutter.",
     link: "https://anonymousoverflow.gitro.xyz",
     img: "/anonymousoverflow.webp",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "ProxyTok",
     description: "Open source alternative frontend for TikTok made using PHP.",
     link: "https://proxytok.gitro.xyz",
     img: "/proxytok.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Rimgo",
     description: "An alternative frontend for Imgur.",
     link: "https://rimgo.gitro.xyz",
     img: "/rimgo.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Quetre",
@@ -54,14 +54,14 @@ const services = [
       "Quetre is an alternative front-end to Quora. It enables you to see answers without ads, trackers, and other such bloat.",
     link: "https://quetre.gitro.xyz",
     img: "/quetre.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Dumb",
     description: "Private alternative front-end for Genius.",
     link: "https://dumb.gitro.xyz",
     img: "/dumb.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Mozhi",
@@ -69,7 +69,7 @@ const services = [
       "Mozhi (spelt moḻi) is an alternative-frontend for many translation engines.",
     link: "https://mozhi.gitro.xyz",
     img: "/mozhi.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Wikiless",
@@ -77,7 +77,7 @@ const services = [
       "A free open source alternative Wikipedia front-end focused on privacy.",
     link: "https://wikiless.gitro.xyz",
     img: "/wikiless.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Priviblur",
@@ -85,7 +85,7 @@ const services = [
       "A privacy-focused alternative frontend to Tumblr with a touch of modern design.",
     link: "https://priviblur.gitro.xyz",
     img: "/tumblr.png",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "NextChat",
@@ -97,13 +97,13 @@ const services = [
     vercel: "/vercel.jpeg",
   },
   {
-    title: "StirlingPDF",
+    title: "Notesnook",
     description:
-      "Locally hosted web application that allows you to perform various operations on PDF files.",
-    link: "https://stirling.gitro.xyz",
-    img: "/stirling.png",
+      "A fully open source & end-to-end encrypted note taking alternative to Evernote.",
+    link: "https://gitro.xyz",
+    img: "/notesnook.png",
     donors: "Donators only",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Wallos",
@@ -111,7 +111,7 @@ const services = [
     link: "https://wallos.gitro.xyz",
     img: "/wallos.png",
     donors: "Donators only",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
   {
     title: "Linkding",
@@ -120,7 +120,7 @@ const services = [
     link: "https://linkding.gitro.xyz",
     img: "/linkding.png",
     donors: "Donators only",
-    cloudflare: "/cloudflare.png",
+    cloudflare: "/cross.png",
   },
 ];
 
@@ -205,8 +205,8 @@ const Instances = () => {
                     ) : null}
                   </td>
                   <td className="pl-12">
-                    {service.cloudflare === "/cloudflare.png" ? (
-                      <img src="/cloudflare.png" alt="Checkbox" />
+                    {service.cloudflare === "/cross.png" ? (
+                      <img src="/cross.png" alt="Checkbox" />
                     ) : null}
                   </td>
                   <td className="pl-12">
