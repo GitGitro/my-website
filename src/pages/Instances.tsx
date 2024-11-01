@@ -97,11 +97,11 @@ const services = [
     vercel: "/vercel.jpeg",
   },
   {
-    title: "Notesnook",
+    title: "Joplin",
     description:
-      "A fully open source & end-to-end encrypted note taking alternative to Evernote.",
-    link: "https://gitro.xyz",
-    img: "/notesnook.png",
+      "The privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS. ",
+    link: "https://joplin.gitro.xyz",
+    img: "/joplin.png",
     donors: "Donators only",
     cloudflare: "/cross.png",
   },
