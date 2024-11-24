@@ -88,6 +88,30 @@ const services = [
     cloudflare: "/cross.png",
   },
   {
+    title: "VERT",
+    description:
+      "VERT is a file conversion utility that uses WebAssembly to convert files on your device instead of a cloud.",
+    link: "https://vert.gitro.xyz",
+    img: "/vert.png",
+    cloudflare: "/cross.png",
+  },
+  {
+    title: "IT-Tools",
+    description:
+      "Collection of handy online tools for developers, with great UX.",
+    link: "https://it-tools.gitro.xyz",
+    img: "/it_tools.png",
+    cloudflare: "/cross.png",
+  },
+  {
+    title: "Painterest",
+    description:
+      "Privacy-respecting, anonymous, NoJS-supporting Pinterest frontend.",
+    link: "https://painterest.gitro.xyz",
+    img: "/painterest.png",
+    cloudflare: "/cross.png",
+  },
+  {
     title: "NextChat",
     description:
       "A cross-platform ChatGPT/Gemini UI (Web / PWA / Linux / Win / MacOS).",
@@ -95,15 +119,6 @@ const services = [
     img: "/next_chat.png",
     donors: "Donators only",
     vercel: "/vercel.jpeg",
-  },
-  {
-    title: "Joplin",
-    description:
-      "The privacy-focused note taking app with sync capabilities for Windows, macOS, Linux, Android and iOS. ",
-    link: "https://joplin.gitro.xyz",
-    img: "/joplin.png",
-    donors: "Donators only",
-    cloudflare: "/cross.png",
   },
   {
     title: "Wallos",
