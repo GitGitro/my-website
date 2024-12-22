@@ -60,6 +60,33 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="overflow-x-auto flex justify-center">
+          <div className="card bg-base-100 w-96 shadow-xl">
+            <div className="card-body">
+              <h2 className="card-title">
+                Mantaining all the projects up and running costs!
+              </h2>
+              <p>
+                If you appreciate the services and want to drop a coin to support me
+                and help keep the the server up, check on Ko-Fi or BuyMeACoffee
+                below! (Ko-Fi offers Paypal). Every donation is appreciated!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex justify-center space-x-4">
+          <Link
+            href="https://buymeacoffee.com/gitro"
+            target="_blank"
+          >
+            <img className="w-44 h-39 p-2" src="/bmc.png" alt="BMC" />
+          </Link>
+          <Link href="https://ko-fi.com/gitro" target="_blank">
+            <img className="w-40 h-30 p-2" src="/kofi.webp" alt="Kofi" />
+          </Link>
+        </div>
+
       <div className="flex justify-center items-center space-x-4 p-4 ">
         <h1 className="text-3xl font-bold">Find me here</h1>
       </div>
