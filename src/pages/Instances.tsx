@@ -12,11 +12,11 @@ const services = [
     img: "/sudo-flix.png",
   },
   {
-    title: "Animunet",
+    title: "Miruro",
     description:
-      "A website where you can watch anime, made using next.js and animetize-api.",
-    link: "https://ani.gitro.xyz",
-    img: "/animunet.png",
+      "A website where you can watch anime, made using animetize-api.",
+    link: "https://miruro.gitro.xyz",
+    img: "/miruro.png",
   },
   {
     title: "Enjoytown",
