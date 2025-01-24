@@ -9,7 +9,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Build and publish the image
-                run: |
+              run: |
                 docker login --username gitgitro --password ${{ secrets.GH_PAT}}
                 docker build . -t ghcr.io/gitgitro/my-website:latest
                 docker push ghcr.io/gitgitro/my-website:latest
