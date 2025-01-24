@@ -85,25 +85,11 @@ const services = [
     img: "/vert.png",
   },
   {
-    title: "IT-Tools",
-    description:
-      "Collection of handy online tools for developers, with great UX.",
-    link: "https://it-tools.gitro.xyz",
-    img: "/it_tools.png",
-  },
-  {
     title: "Painterest",
     description:
       "Privacy-respecting, anonymous, NoJS-supporting Pinterest frontend.",
     link: "https://painterest.gitro.xyz",
     img: "/painterest.png",
-  },
-  {
-    title: "Redlib",
-    description:
-      "An alternative private front-end to Reddit, with its origins in Libreddit.",
-    link: "https://redlib.gitro.xyz",
-    img: "/redlib.png",
   },
 ];
 
