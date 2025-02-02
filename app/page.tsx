@@ -68,8 +68,8 @@ export default function Home() {
               </h2>
               <p>
                 If you appreciate the services and want to drop a coin to support me
-                and help keep the the server up, check on Ko-Fi or BuyMeACoffee
-                below! (Ko-Fi offers Paypal). Every donation is appreciated!
+                and help keep the the server up, check on BuyMeACoffee 
+                below, or the crypto addresses. Every donation is appreciated!
               </p>
             </div>
           </div>
@@ -82,8 +82,10 @@ export default function Home() {
           >
             <img className="w-44 h-39 p-2" src="/bmc.png" alt="BMC" />
           </Link>
-          <Link href="https://ko-fi.com/gitro" target="_blank">
-            <img className="w-40 h-30 p-2" src="/kofi.webp" alt="Kofi" />
+          <Link
+            href="/Crypto"
+          >
+            <img className="w-44 h-39 p-2" src="/monero.png" alt="sdjsaudfasgfasu" />
           </Link>
         </div>
 

@@ -91,6 +91,13 @@ const services = [
     link: "https://painterest.gitro.xyz",
     img: "/painterest.png",
   },
+  {
+    title: "Redlib",
+    description:
+      "An alternative private front-end to Reddit, with its origins in Libreddit.",
+    link: "https://redlib.gitro.xyz",
+    img: "/redlib.png",
+  },
 ];
 
 const Instances = () => {
