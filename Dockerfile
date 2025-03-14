@@ -1,34 +1,14 @@
-FROM node:23 AS base
-
-FROM base AS deps
-
-WORKDIR /app
-
-COPY package.json ./
-
+FROM node:23-alpine as builder
+RUN mkdir -p /usr/src/next-nginx
+WORKDIR /usr/src/next-nginx
+COPY package*.json /usr/src/next-nginx/
 RUN npm install
-
-FROM base AS builder
-WORKDIR /app
-COPY --from=deps /app/node_modules ./node_modules
 COPY . .
+RUN npx next build
 
-RUN npm run build
-
-FROM base AS runner
-WORKDIR /app
-
-ENV NODE_ENV production
-
-COPY --from=builder /app/public ./public
-
-RUN mkdir .next
-
-COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-
-EXPOSE 3000
-
-ENV PORT 3000
-
-CMD ["node", "server.js"]
+FROM nginx:1.27.4-alpine as production
+RUN rm -rf /usr/share/nginx/html/*
+COPY --from=builder /usr/src/next-nginx/out/ /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
