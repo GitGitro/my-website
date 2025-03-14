@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { ThemeProvider } from "next-themes";
 
 
-const openSans = localFont({
-  src: "./fonts/OpenSans.ttf",
-  weight: "100 900",
-});
 
 export const metadata: Metadata = {
   title: "Gitro",
@@ -19,12 +15,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="sunset">
-      <body
-        className={`${openSans} antialiased`}
-      >
-        {children}
+    <html suppressHydrationWarning>
+      <head />
+      <body>
+        <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
-  );
+  )
 }
