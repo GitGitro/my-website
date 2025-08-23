@@ -1,17 +1,11 @@
 FROM node:23-alpine AS builder
 
-ARG NEXT_PUBLIC_UMAMI
-ENV NEXT_PUBLIC_UMAMI=$NEXT_PUBLIC_UMAMI
-
 RUN mkdir -p /usr/src/next-nginx
 WORKDIR /usr/src/next-nginx
 COPY package*.json /usr/src/next-nginx/
 RUN npm install
 COPY . .
 RUN npx next build
-
-RUN find /usr/src/next-nginx/out -name "*.html" -exec sed -i "s/__UMAMI_ID__/$NEXT_PUBLIC_UMAMI/g" {} \;
-RUN find /usr/src/next-nginx/out -name "*.js" -exec sed -i "s/__UMAMI_ID__/$NEXT_PUBLIC_UMAMI/g" {} \;
 
 FROM nginx:1.27.4-alpine AS production
 RUN rm -rf /usr/share/nginx/html/*
