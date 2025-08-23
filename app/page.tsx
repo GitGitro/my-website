@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
       <>
-        <Script defer src="https://umami-snowy-delta-48.vercel.app/script.js" data-website-id={process.env.NEXT_PUBLIC_UMAMI}></Script>
+        <Script defer src="https://umami-snowy-delta-48.vercel.app/script.js" data-website-id="__UMAMI_ID__"></Script>
       </>
       <div className="text-center p-4 h-screen">
         <div className="mb-10">
