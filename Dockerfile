@@ -1,3 +1,6 @@
+ARG NEXT_PUBLIC_UMAMI
+ENV NEXT_PUBLIC_UMAMI=$NEXT_PUBLIC_UMAMI
+
 FROM node:23-alpine as builder
 RUN mkdir -p /usr/src/next-nginx
 WORKDIR /usr/src/next-nginx

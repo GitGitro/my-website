@@ -11,5 +11,7 @@ jobs:
             - name: Build and publish the image
               run: |
                 docker login --username gitgitro --password ${{ secrets.GH_PAT}} ghcr.io
-                docker build . -t ghcr.io/gitgitro/my-website:latest
+                docker build \
+                    --build-arg NEXT_PUBLIC_UMAMI="${{ secrets.NEXT_PUBLIC_UMAMI }}" \ 
+                    -t ghcr.io/gitgitro/my-website:latest .
                 docker push ghcr.io/gitgitro/my-website:latest
