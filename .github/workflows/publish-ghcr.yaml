@@ -8,9 +8,6 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v4
-            - name: Create/Update .env file
-              run: |
-                echo "NEXT_PUBLIC_UMAMI=${{ secrets.NEXT_PUBLIC_UMAMI }}" >> .env
             - name: Build and publish the image
               run: |
                 docker login --username gitgitro --password ${{ secrets.GH_PAT}} ghcr.io

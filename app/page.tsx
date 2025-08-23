@@ -2,14 +2,12 @@ import "/app/globals.css";
 import Link from "next/link";
 import { ThemeProvider } from 'next-themes'
 import Image from "next/image";
-import Script from 'next/script'
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home() {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <>
-        <Script defer src="https://umami-snowy-delta-48.vercel.app/script.js" data-website-id={process.env.NEXT_PUBLIC_UMAMI}></Script>
-      </>
+      <Analytics />
       <div className="text-center p-4 h-screen">
         <div className="mb-10">
           <Image
