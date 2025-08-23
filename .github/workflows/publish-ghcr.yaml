@@ -9,7 +9,7 @@ jobs:
         steps:
             - uses: actions/checkout@v4
             - name: Create/Update .env file
-                run: |
+              run: |
                 echo "NEXT_PUBLIC_UMAMI=${{ secrets.NEXT_PUBLIC_UMAMI }}" >> .env
             - name: Build and publish the image
               run: |
