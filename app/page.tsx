@@ -2,12 +2,12 @@ import "/app/globals.css";
 import Link from "next/link";
 import { ThemeProvider } from 'next-themes'
 import Image from "next/image";
-import { Analytics } from "@vercel/analytics/next"
+import Script from "next/script";
 
 export default function Home() {
   return (
     <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-      <Analytics />
+      <Script src="https://cloud.umami.is/script.js" data-website-id={process.env.TRACKING_ID}/>
       <div className="text-center p-4 h-screen">
         <div className="mb-10">
           <Image
